@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 // Nothing
             }
         });
+
         // TextWatcher to check if password is empty
         passwordEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -136,4 +137,3 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setEnabled(!TextUtils.isEmpty(userName) && !TextUtils.isEmpty(password));
     }
 }
-// TODO: Find out why the error still appears when logging in

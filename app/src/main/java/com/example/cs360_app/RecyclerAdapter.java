@@ -17,10 +17,8 @@ import java.util.ArrayList;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     // Arraylist of weight records
     private ArrayList<WeightRecordModel> weightRecordModels;
-
     private OnItemClickListener onItemClickListener;
     private Context context;
-
 
     // Constructor for the adapter
     public RecyclerAdapter(ArrayList<WeightRecordModel> weightRecordModels) {
@@ -76,16 +74,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.date.setText(currentRecord.getDate());
         holder.menuIcon.setImageResource(currentRecord.image);
         holder.lbs.setText("lbs");
-        // TODO: Handle menu icon click?
-        /*
-        holder.menuIcon.setOnClickListener(v -> {
-            BottomSheetEditRecord bottomSheetEditRecord = new BottomSheetEditRecord(currentRecord);
-            bottomSheetEditRecord.setEditRecordListener((weightRecord) -> {
-                weightRecordModels.set(position, weightRecord);
-                notifyDataSetChanged();
-            });
-        });
-        */
     }
 
     @Override
